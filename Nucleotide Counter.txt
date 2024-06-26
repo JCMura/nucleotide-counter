@@ -1,0 +1,30 @@
+count = []
+A_count = 0
+G_count = 0
+C_count = 0
+T_count = 0
+dna = input("Please input DNA")
+dna = dna.strip().upper().replace(" ", "")
+for base in dna:
+    if base == "A":
+        A_count += 1
+    if base == "G":
+        G_count += 1
+    if base == "C":
+        C_count += 1
+    if base == "T":
+        T_count += 1
+    if base != "A" and base != "G" and base != "C" and base != "T":
+        wrong = base
+        print("Error! Non-nucleotide character detected: ", wrong)
+        print("Review sequence and reenter.")
+count.append(A_count)
+count.append(G_count)
+count.append(C_count)
+count.append(T_count)
+tot = sum(count)
+print("Total nucleotides:", tot)
+print("A: ", A_count)
+print("G: ", G_count)
+print("C: ", C_count)
+print("T: ", T_count)
